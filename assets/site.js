@@ -1,15 +1,20 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
 const servicesMenu = document.querySelector('.nav-more');
+const mobileLayout = window.matchMedia('(max-width: 1000px)');
+const pageContent = document.querySelectorAll('main, .site-footer');
 
-function closeNavigation() {
-  navigation.removeAttribute('data-open');
-  menuToggle.setAttribute('aria-expanded', 'false');
+function setNavigation(open) {
+  navigation.toggleAttribute('data-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  pageContent.forEach((element) => { element.inert = open; });
+  if (!open) servicesMenu.open = false;
 }
 
-menuToggle.addEventListener('click', () => {
-  const open = navigation.toggleAttribute('data-open');
-  menuToggle.setAttribute('aria-expanded', String(open));
+menuToggle.addEventListener('click', () => setNavigation(!navigation.hasAttribute('data-open')));
+mobileLayout.addEventListener('change', () => {
+  if (!mobileLayout.matches && navigation.hasAttribute('data-open')) setNavigation(false);
 });
 
 document.addEventListener('click', (event) => {
@@ -17,7 +22,7 @@ document.addEventListener('click', (event) => {
     servicesMenu.open = false;
   }
   if (navigation.hasAttribute('data-open') && !event.target.closest('.site-header')) {
-    closeNavigation();
+    setNavigation(false);
   }
 });
 
@@ -27,7 +32,7 @@ document.addEventListener('keydown', (event) => {
     servicesMenu.open = false;
     servicesMenu.querySelector('summary').focus();
   } else if (navigation.hasAttribute('data-open')) {
-    closeNavigation();
+    setNavigation(false);
     menuToggle.focus();
   }
 });
@@ -43,6 +48,18 @@ if (galleryGrid) {
   const displayLocation = dialog.querySelector('.lightbox-location');
   const controls = dialog.querySelector('.lightbox-nav');
   const slides = [...document.querySelectorAll('.preview-cards button')];
+  const loadMore = document.querySelector('.gallery-more');
+  const gallerySection = document.querySelector('.gallery-section');
+  const actionSection = document.querySelector('.gallery-action');
+  let expanded = false;
+
+  function visibleItems() {
+    const current = items.filter((item) => !item.hidden && item.getClientRects().length > 0);
+    if (!mobileLayout.matches) return current;
+    return current.sort((left, right) =>
+      (Number(left.dataset.mobileOrder) || Infinity) - (Number(right.dataset.mobileOrder) || Infinity)
+    );
+  }
   let group = [];
   let currentIndex = 0;
 
@@ -54,8 +71,11 @@ if (galleryGrid) {
       item.hidden = active.dataset.category !== 'all' &&
         !item.dataset.categories.split(' ').includes(active.dataset.category);
     });
-    galleryGrid.toggleAttribute('data-filtered', active.dataset.category !== 'all');
-    const count = items.filter((item) => !item.hidden).length;
+    const filtered = active.dataset.category !== 'all';
+    galleryGrid.toggleAttribute('data-filtered', filtered);
+    gallerySection.toggleAttribute('data-filtered', filtered);
+    loadMore.hidden = filtered;
+    const count = visibleItems().length;
     status.textContent = count === 1 ? '1 campaign shown' : count + ' campaigns shown';
   }
 
@@ -82,7 +102,7 @@ if (galleryGrid) {
 
   filters.forEach((filter) => filter.addEventListener('click', () => applyFilter(filter)));
   items.forEach((item) => {
-    item.addEventListener('click', () => openPhoto(item, items.filter((photo) => !photo.hidden)));
+    item.addEventListener('click', () => openPhoto(item, visibleItems()));
   });
   slides.forEach((slide) => slide.addEventListener('click', () => openPhoto(slide, slides)));
   dialog.querySelector('.lightbox-close').addEventListener('click', () => dialog.close());
@@ -96,47 +116,31 @@ if (galleryGrid) {
     if (event.key === 'ArrowRight') movePhoto(1);
   });
 
+  loadMore.addEventListener('click', () => {
+    expanded = !expanded;
+    galleryGrid.toggleAttribute('data-expanded', expanded);
+    actionSection.toggleAttribute('data-expanded', expanded);
+    loadMore.setAttribute('aria-expanded', String(expanded));
+    loadMore.firstChild.textContent = expanded ? 'Show Fewer Photos ' : 'View More Photos ';
+  });
+
   const category = new URLSearchParams(location.search).get('category');
   const initial = filters.find((filter) => filter.dataset.category === category);
   if (initial) applyFilter(initial);
 }
 
-const faqForm = document.querySelector('.faq-search');
-if (faqForm) {
-  const input = faqForm.querySelector('input');
-  const groups = [...document.querySelectorAll('.faq-group')];
-  const status = document.querySelector('.faq-status');
+const campaignFilters = [...document.querySelectorAll('[data-campaign-filter]')];
+const campaignCards = [...document.querySelectorAll('[data-campaign-categories]')];
 
-  function filterQuestions() {
-    const terms = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
-    let matches = 0;
-    groups.forEach((group) => {
-      const category = group.querySelector('h2').textContent.toLowerCase();
-      const questions = [...group.querySelectorAll('.question')];
-      questions.forEach((question) => {
-        const searchable = category + ' ' + question.textContent.toLowerCase();
-        question.hidden = !terms.every((term) => searchable.includes(term));
-        if (!question.hidden) matches += 1;
-      });
-      group.hidden = questions.every((question) => question.hidden);
-    });
-    status.hidden = terms.length === 0;
-    status.textContent = matches === 0 ? 'No questions match your search.' :
-      matches + (matches === 1 ? ' question found.' : ' questions found.');
-  }
-
-  faqForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    filterQuestions();
-  });
-  input.addEventListener('input', filterQuestions);
-  document.querySelectorAll('.faq-side nav a').forEach((anchor) => {
-    anchor.addEventListener('click', () => {
-      input.value = '';
-      filterQuestions();
+campaignFilters.forEach((filter) => {
+  filter.addEventListener('click', () => {
+    campaignFilters.forEach((button) => button.setAttribute('aria-pressed', String(button === filter)));
+    const category = filter.dataset.campaignFilter;
+    campaignCards.forEach((card) => {
+      card.hidden = category !== 'all' && !card.dataset.campaignCategories.split(' ').includes(category);
     });
   });
-}
+});
 
 document.querySelectorAll('[data-inquiry]').forEach((form) => {
   const area = form.querySelector('[data-required-group]');

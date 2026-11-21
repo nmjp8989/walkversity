@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="page-about">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -18,24 +18,26 @@
       <img src="assets/logo-mark.webp" alt="" width="58" height="57" fetchpriority="high" >
       <span><strong>Walk<span>vertising</span></strong><small>Mobile Street Advertising Specialists</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg></button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg><span class="menu-close" aria-hidden="true">×</span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html" >Home</a><a href="about.html" aria-current="page">About</a>
       <details class="nav-more" >
         <summary>Services <span class="chevron" aria-hidden="true"></span></summary>
-        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a></div>
+        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" class="subnav-location" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a></div>
       </details>
-      <a href="how-it-works.html" >How It Works</a><a href="campaigns.html" >Campaigns</a><a href="gallery.html" >Gallery</a><a href="contact.html" >Contact</a>
+      <a href="how-it-works.html" >How It Works</a><a href="where-we-advertise.html" class="mobile-nav-link">Where We Advertise</a>
+      <a href="campaigns.html" >Campaigns</a><a href="gallery.html" >Gallery</a><a href="artwork-specifications.html" >Artwork Specs</a><a href="contact.html" >Contact</a>
+      <a href="quote.html" class="button mobile-nav-quote"><span>Request a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
     </nav>
-    <a href="quote.html" class="button button-small">Get a Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
+    <a href="quote.html" class="button button-small header-quote"><span>Get a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
   </div>
 </header>
 <main id="main">
-<section class="hero hero-tall" data-dark>
+<div class="desktop-design"><section class="hero hero-tall" data-dark>
   <div class="wrap hero-copy">
     <div class="eyebrow">About Walkvertising</div>
     <h1><span>We bring</span><span class="accent">brands</span><span>closer to</span><span>people.</span></h1>
-    <p>High-impact, mobile advertising that puts your message directly in front of the right audience.</p><div class="hero-actions"><a href="quote.html" class="button ">Request a Campaign Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
+    <p>High-impact, mobile advertising that puts your message directly in front of the right audience.</p><div class="hero-actions"><a href="quote.html" class="button "><span>Request a Campaign Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
   </div>
   <img src="assets/hero-about.webp" alt="Walking billboards on a busy Toronto street" width="677" height="379" fetchpriority="high" class="hero-image"><svg class="wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
   <path fill="#ffe20a" d="M0 28C175-25 393 29 635 33c232 5 339-27 500-23 145 4 199 29 305 8v30H0z"/>
@@ -53,18 +55,26 @@
 <a href="gallery.html?category=festivals" class="tile tile-yellow"><img src="assets/events.webp" alt="" width="246" height="150" loading="lazy" decoding="async" ><span class="tile-caption">Events &amp; Festivals</span></a>
 <a href="gallery.html?category=corporate" class="tile tile-yellow"><img src="assets/downtown.webp" alt="" width="245" height="148" loading="lazy" decoding="async" ><span class="tile-caption">Downtown Campaigns</span></a>
 <a href="gallery.html?category=night" class="tile tile-yellow"><img src="assets/evening.webp" alt="" width="248" height="126" loading="lazy" decoding="async" ><span class="tile-caption">Evening Campaigns</span></a>
-</div></section><section class="section wrap " ><div class="audience-strip"><h2 class="display">Who We<br><span class="mark">Work With</span></h2><div class="audience-grid"><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#food"></use></svg>Restaurants<br>&amp; Food Brands</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#retail"></use></svg>Retail<br>Businesses</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#megaphone"></use></svg>Advertising<br>Agencies</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg>Event &amp; Festival<br>Organizers</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg>Corporate<br>Marketing Teams</div></div></div></section>
-<section class="cta-band" data-dark>
+</div></section><section class="section wrap " ><div class="audience-strip"><h2 class="display">Who We<br><span class="mark">Work With</span></h2><div class="audience-grid"><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#food"></use></svg>Restaurants<br>&amp; Food Brands</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#retail"></use></svg>Retail<br>Businesses</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#megaphone"></use></svg>Advertising<br>Agencies</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg>Event &amp; Festival<br>Organizers</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg>Corporate<br>Marketing Teams</div></div></div></section></div><div class="mobile-design"><section class="section wrap mobile-section" ><div class="mobile-about-hero">
+  <img src="assets/about-mobile.webp" alt="A Walkvertising ambassador wearing a billboard" width="960" height="640" fetchpriority="high" >
+  <h1>About<br>Walkvertising</h1>
+</div>
+<div class="mobile-about-card">
+  <p>We are a Canadian mobile advertising company that brings brands closer to people through high-visibility walking billboard campaigns across Toronto and the GTA.</p>
+  <div class="mini-feature"><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#target"></use></svg></span><div><h3>Our Mission</h3><p>Make outdoor advertising more visible, mobile and accessible.</p></div></div><div class="mini-feature"><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#eye"></use></svg></span><div><h3>Our Vision</h3><p>Become a trusted Canadian partner for innovative street-level advertising.</p></div></div>
+</div></section></div>
+<div class="desktop-design"><section class="cta-band" data-dark>
   <div class="wrap cta-inner">
     <h2>Ready to take your brand<span class="accent">to the streets?</span></h2>
-    <div class="cta-action"><a href="quote.html" class="button ">Request a Campaign Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
+    <div class="cta-action"><a href="quote.html" class="button "><span>Request a Campaign Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
   </div>
-</section>
+</section></div>
+
 </main>
 <footer class="site-footer" data-dark>
   <div class="wrap footer-inner">
     <span>Walkvertising · Toronto &amp; the GTA</span>
-    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a><a href="privacy-policy.html" >Privacy Policy</a></nav>
+    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="artwork-specifications.html" >Artwork Specifications</a><a href="privacy-policy.html" >Privacy Policy</a><a href="index.html#faq" >FAQ</a></nav>
     <a href="mailto:info@walkvertising.ca">info@walkvertising.ca</a>
   </div>
 </footer>

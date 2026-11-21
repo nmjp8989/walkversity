@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="page-locations">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -18,20 +18,22 @@
       <img src="assets/logo-mark.webp" alt="" width="58" height="57" fetchpriority="high" >
       <span><strong>Walk<span>vertising</span></strong><small>Mobile Street Advertising Specialists</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg></button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg><span class="menu-close" aria-hidden="true">×</span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html" >Home</a><a href="about.html" >About</a>
       <details class="nav-more" data-active>
         <summary>Services <span class="chevron" aria-hidden="true"></span></summary>
-        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" aria-current="page">Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a></div>
+        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" class="subnav-location" aria-current="page">Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a></div>
       </details>
-      <a href="how-it-works.html" >How It Works</a><a href="campaigns.html" >Campaigns</a><a href="gallery.html" >Gallery</a><a href="contact.html" >Contact</a>
+      <a href="how-it-works.html" >How It Works</a><a href="where-we-advertise.html" class="mobile-nav-link" aria-current="page">Where We Advertise</a>
+      <a href="campaigns.html" >Campaigns</a><a href="gallery.html" >Gallery</a><a href="artwork-specifications.html" >Artwork Specs</a><a href="contact.html" >Contact</a>
+      <a href="quote.html" class="button mobile-nav-quote"><span>Request a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
     </nav>
-    <a href="quote.html" class="button button-small">Get a Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
+    <a href="quote.html" class="button button-small header-quote"><span>Get a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
   </div>
 </header>
 <main id="main">
-<section class="hero " data-dark>
+<div class="desktop-design"><section class="hero " data-dark>
   <div class="wrap hero-copy">
     <div class="eyebrow">Where We Advertise</div>
     <h1><span>Your brand.</span><span class="accent">Everywhere</span><span class="accent">that matters.</span></h1>
@@ -41,7 +43,7 @@
   <path fill="#ffe20a" d="M0 28C175-25 393 29 635 33c232 5 339-27 500-23 145 4 199 29 305 8v30H0z"/>
   <path fill="#fff" d="M0 42C184-10 394 35 639 39c227 5 346-21 503-17 145 4 199 23 298 3v23H0z"/>
 </svg>
-</section><section class="section wrap " ><div class="section-title"><h2>Our Advertising Locations</h2></div><p class="section-intro">Strategic, high-traffic locations across Toronto, the GTA and key Ontario markets.</p><div class="grid grid-4"><article class="tile location-card"><img src="assets/toronto.webp" alt="" width="235" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Toronto</h3><p>Downtown, Nathan Phillips Square, Scarborough, North York and Little Jamaica.</p></div></article><article class="tile location-card"><img src="assets/mississauga.webp" alt="" width="229" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Mississauga</h3><p>Celebration Square, Square One and surrounding areas.</p></div></article><article class="tile location-card"><img src="assets/brampton.webp" alt="" width="226" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Brampton</h3><p>Downtown Brampton, Garden Square and cultural events.</p></div></article><article class="tile location-card"><img src="assets/vaughan.webp" alt="" width="234" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Vaughan</h3><p>Vaughan Metropolitan Centre, retail areas and major events.</p></div></article><article class="tile location-card"><img src="assets/hamilton.webp" alt="" width="235" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Hamilton</h3><p>Downtown Hamilton, Jackson Square and key event locations.</p></div></article><article class="tile location-card"><img src="assets/oakville.webp" alt="" width="229" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Oakville</h3><p>Downtown Oakville, the waterfront and shopping districts.</p></div></article><article class="tile location-card"><img src="assets/burlington.webp" alt="" width="226" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Burlington</h3><p>Downtown Burlington, the waterfront and community events.</p></div></article><article class="tile location-card"><img src="assets/kitchener.webp" alt="" width="234" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Kitchener</h3><p>Downtown Kitchener, city events and high-traffic areas.</p></div></article></div></section><section class="section wrap " ><div class="split split-center">
+</section><section class="section wrap " ><div class="section-title"><h2>Our Advertising Locations</h2></div><p class="section-intro">Strategic, high-traffic locations across Toronto, the GTA and key Ontario markets.</p><div class="grid grid-4"><article class="tile location-card"><img src="assets/toronto.webp" alt="" width="235" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Toronto</h3><p>Downtown, Nathan Phillips Square, Scarborough, North York and Little Jamaica.</p></div></article><article class="tile location-card"><img src="assets/mississauga.webp" alt="" width="229" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Mississauga</h3><p>Celebration Square, Square One and surrounding areas.</p></div></article><article class="tile location-card"><img src="assets/brampton.webp" alt="" width="226" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Brampton</h3><p>Downtown Brampton, Garden Square and cultural events.</p></div></article><article class="tile location-card"><img src="assets/vaughan.webp" alt="" width="234" height="112" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Vaughan</h3><p>Vaughan Metropolitan Centre, retail areas and major events.</p></div></article><article class="tile location-card"><img src="assets/hamilton.webp" alt="" width="235" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Hamilton</h3><p>Downtown Hamilton, Jackson Square and key event locations.</p></div></article><article class="tile location-card"><img src="assets/oakville.webp" alt="" width="229" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Oakville</h3><p>Downtown Oakville, the waterfront and shopping districts.</p></div></article><article class="tile location-card"><img src="assets/burlington.webp" alt="" width="226" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Burlington</h3><p>Downtown Burlington, the waterfront and community events.</p></div></article><article class="tile location-card"><img src="assets/kitchener.webp" alt="" width="234" height="85" loading="lazy" decoding="async" ><div class="tile-copy"><h3><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg>Kitchener</h3><p>Downtown Kitchener, city events and high-traffic areas.</p></div></article></div></section><section class="section wrap " id="desktop-coverage-map"><div class="split split-center">
   <div><h2 class="tag">Our Coverage Area</h2><img src="assets/coverage-map.webp" alt="Illustrated regional map showing Toronto, Mississauga, Brampton, Vaughan, Hamilton, Oakville, Burlington and Kitchener" width="518" height="241" loading="lazy" decoding="async" ></div>
   <div><h2 class="display">GTA &amp; Ontario Coverage</h2>
     <p>Flexible walking billboard campaigns in major cities, retail districts, festivals and community events.</p>
@@ -51,18 +53,22 @@
 <a href="gallery.html" class="tile"><img src="assets/action-downtown.webp" alt="" width="323" height="155" loading="lazy" decoding="async" ><span class="tile-caption"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg>Downtown Toronto</span></a>
 <a href="gallery.html" class="tile"><img src="assets/action-night.webp" alt="" width="309" height="155" loading="lazy" decoding="async" ><span class="tile-caption"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#moon"></use></svg>Night Events</span></a>
 <a href="gallery.html" class="tile"><img src="assets/action-festival.webp" alt="" width="302" height="155" loading="lazy" decoding="async" ><span class="tile-caption"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg>Street Festivals</span></a>
-</div></section>
-<section class="cta-band" data-dark>
+</div></section></div><div class="mobile-design"><section class="section wrap mobile-section" ><div class="mobile-intro"><h1>Where We Advertise</h1><p>Strategic, high-traffic locations across Toronto, the GTA and Ontario.</p></div><img src="assets/mobile-skyline-small.webp" alt="Toronto waterfront skyline at dusk" width="780" height="520" fetchpriority="high" class="mobile-location-photo"><ul class="mobile-cities"><li><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg></span><div><h2>Toronto</h2><p>Downtown, North York, Scarborough, Eglinton West and Little Jamaica.</p></div></li><li><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg></span><div><h2>Mississauga</h2><p>Square One and surrounding areas.</p></div></li><li><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg></span><div><h2>Brampton</h2><p>Downtown and key event locations.</p></div></li><li><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg></span><div><h2>Vaughan</h2><p>Vaughan Metropolitan Centre and major shopping areas.</p></div></li></ul><details class="mobile-coverage" id="coverage-map"><summary class="button button-outline mobile-button"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#pin"></use></svg> View Coverage Map</summary>
+  <img src="assets/coverage-map.webp" alt="Illustrated map of Walkvertising’s Toronto, GTA and Ontario service area" width="518" height="241" loading="lazy" decoding="async" >
+  <p>Also serving Hamilton, Oakville, Burlington, Kitchener and surrounding areas.</p>
+</details></section></div>
+<div class="desktop-design"><section class="cta-band" data-dark>
   <div class="wrap cta-inner">
     <h2>Let’s take your brand<span class="accent">to more people.</span></h2>
-    <div class="cta-action"><a href="quote.html" class="button ">Get a Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
+    <div class="cta-action"><a href="quote.html" class="button "><span>Get a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
   </div>
-</section>
+</section></div>
+
 </main>
 <footer class="site-footer" data-dark>
   <div class="wrap footer-inner">
     <span>Walkvertising · Toronto &amp; the GTA</span>
-    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a><a href="privacy-policy.html" >Privacy Policy</a></nav>
+    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="artwork-specifications.html" >Artwork Specifications</a><a href="privacy-policy.html" >Privacy Policy</a><a href="index.html#faq" >FAQ</a></nav>
     <a href="mailto:info@walkvertising.ca">info@walkvertising.ca</a>
   </div>
 </footer>

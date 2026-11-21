@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="page-privacy">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -18,16 +18,18 @@
       <img src="assets/logo-mark.webp" alt="" width="58" height="57" fetchpriority="high" >
       <span><strong>Walk<span>vertising</span></strong><small>Mobile Street Advertising Specialists</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg></button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg><span class="menu-close" aria-hidden="true">×</span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html" >Home</a><a href="about.html" >About</a>
       <details class="nav-more" >
         <summary>Services <span class="chevron" aria-hidden="true"></span></summary>
-        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a></div>
+        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" class="subnav-location" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a></div>
       </details>
-      <a href="how-it-works.html" >How It Works</a><a href="campaigns.html" >Campaigns</a><a href="gallery.html" >Gallery</a><a href="contact.html" >Contact</a>
+      <a href="how-it-works.html" >How It Works</a><a href="where-we-advertise.html" class="mobile-nav-link">Where We Advertise</a>
+      <a href="campaigns.html" >Campaigns</a><a href="gallery.html" >Gallery</a><a href="artwork-specifications.html" >Artwork Specs</a><a href="contact.html" >Contact</a>
+      <a href="quote.html" class="button mobile-nav-quote"><span>Request a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
     </nav>
-    <a href="quote.html" class="button button-small">Get a Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
+    <a href="quote.html" class="button button-small header-quote"><span>Get a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
   </div>
 </header>
 <main id="main">
@@ -48,11 +50,12 @@
   <p>For questions about this policy or how we handle your information, email <a class="accent" href="mailto:info@walkvertising.ca">info@walkvertising.ca</a>.</p></div>
 <p class="policy-date"><strong>Effective date</strong> <time datetime="2026-11-19">November 19, 2026</time></p></section>
 
+
 </main>
 <footer class="site-footer" data-dark>
   <div class="wrap footer-inner">
     <span>Walkvertising · Toronto &amp; the GTA</span>
-    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a><a href="privacy-policy.html" >Privacy Policy</a></nav>
+    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="artwork-specifications.html" >Artwork Specifications</a><a href="privacy-policy.html" >Privacy Policy</a><a href="index.html#faq" >FAQ</a></nav>
     <a href="mailto:info@walkvertising.ca">info@walkvertising.ca</a>
   </div>
 </footer>

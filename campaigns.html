@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/site.js" defer></script>
 </head>
-<body>
+<body class="page-campaigns">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
@@ -18,24 +18,26 @@
       <img src="assets/logo-mark.webp" alt="" width="58" height="57" fetchpriority="high" >
       <span><strong>Walk<span>vertising</span></strong><small>Mobile Street Advertising Specialists</small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg></button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#menu"></use></svg><span class="menu-close" aria-hidden="true">×</span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html" >Home</a><a href="about.html" >About</a>
       <details class="nav-more" >
         <summary>Services <span class="chevron" aria-hidden="true"></span></summary>
-        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a></div>
+        <div class="subnav"><a href="services.html" >Our Services</a><a href="where-we-advertise.html" class="subnav-location" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a></div>
       </details>
-      <a href="how-it-works.html" >How It Works</a><a href="campaigns.html" aria-current="page">Campaigns</a><a href="gallery.html" >Gallery</a><a href="contact.html" >Contact</a>
+      <a href="how-it-works.html" >How It Works</a><a href="where-we-advertise.html" class="mobile-nav-link">Where We Advertise</a>
+      <a href="campaigns.html" aria-current="page">Campaigns</a><a href="gallery.html" >Gallery</a><a href="artwork-specifications.html" >Artwork Specs</a><a href="contact.html" >Contact</a>
+      <a href="quote.html" class="button mobile-nav-quote"><span>Request a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
     </nav>
-    <a href="quote.html" class="button button-small">Get a Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
+    <a href="quote.html" class="button button-small header-quote"><span>Get a Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a>
   </div>
 </header>
 <main id="main">
-<section class="hero " data-dark>
+<div class="desktop-design"><section class="hero " data-dark>
   <div class="wrap hero-copy">
     <div class="eyebrow">Campaigns</div>
     <h1><span>Your message.</span><span class="accent">On the move.</span></h1>
-    <p>Find the right format for your brand, whether you’re opening a new location, planning an event or looking to reach people across the city.</p><div class="hero-actions"><a href="quote.html" class="button ">Request a Campaign Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
+    <p>Find the right format for your brand, whether you’re opening a new location, planning an event or looking to reach people across the city.</p><div class="hero-actions"><a href="quote.html" class="button "><span>Request a Campaign Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
   </div>
   <img src="assets/hero-gallery.webp" alt="Walking billboards on a busy Toronto street" width="598" height="273" fetchpriority="high" class="hero-image"><svg class="wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
   <path fill="#ffe20a" d="M0 28C175-25 393 29 635 33c232 5 339-27 500-23 145 4 199 29 305 8v30H0z"/>
@@ -48,18 +50,27 @@
 <a href="gallery.html?category=restaurants" class="tile tile-yellow"><img src="assets/product.webp" alt="" width="243" height="125" loading="lazy" decoding="async" ><span class="tile-caption">Product Promotions</span></a>
 <a href="gallery.html?category=night" class="tile tile-yellow"><img src="assets/evening.webp" alt="" width="248" height="126" loading="lazy" decoding="async" ><span class="tile-caption">Evening Campaigns</span></a>
 <a href="gallery.html?category=festivals" class="tile tile-yellow"><img src="assets/community.webp" alt="" width="248" height="126" loading="lazy" decoding="async" ><span class="tile-caption">Community &amp; Special Events</span></a>
-</div></section><section class="section wrap " ><div class="audience-strip"><h2 class="display">Who We<br><span class="mark">Work With</span></h2><div class="audience-grid"><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#food"></use></svg>Restaurants<br>&amp; Food Brands</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#retail"></use></svg>Retail<br>Businesses</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#megaphone"></use></svg>Advertising<br>Agencies</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg>Event &amp; Festival<br>Organizers</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg>Corporate<br>Marketing Teams</div></div></div></section>
-<section class="cta-band" data-dark>
+</div></section><section class="section wrap " ><div class="audience-strip"><h2 class="display">Who We<br><span class="mark">Work With</span></h2><div class="audience-grid"><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#food"></use></svg>Restaurants<br>&amp; Food Brands</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#retail"></use></svg>Retail<br>Businesses</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#megaphone"></use></svg>Advertising<br>Agencies</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg>Event &amp; Festival<br>Organizers</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg>Corporate<br>Marketing Teams</div></div></div></section></div><div class="mobile-design"><section class="section wrap mobile-section" ><div class="mobile-intro"><h1>Our Campaigns</h1></div><div class="campaign-filters" aria-label="Filter campaigns"><button class="campaign-filter" type="button" data-campaign-filter="all" aria-pressed="true" aria-controls="mobile-campaign-grid">All</button><button class="campaign-filter" type="button" data-campaign-filter="retail" aria-pressed="false" aria-controls="mobile-campaign-grid">Retail</button><button class="campaign-filter" type="button" data-campaign-filter="events" aria-pressed="false" aria-controls="mobile-campaign-grid">Events</button><button class="campaign-filter" type="button" data-campaign-filter="festivals" aria-pressed="false" aria-controls="mobile-campaign-grid">Festivals</button></div><div id="mobile-campaign-grid"><a class="mobile-campaign-card" href="gallery.html?category=festivals" data-campaign-categories="events festivals">
+    <img src="assets/action-downtown.webp" alt="" width="323" height="155" loading="lazy" decoding="async" ><span class="mobile-campaign-copy"><span><strong>Event &amp; Festival Campaign</strong><span>High-visibility activation for major events.</span></span><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></span></span>
+  </a><a class="mobile-campaign-card" href="gallery.html?category=retail" data-campaign-categories="retail">
+    <img src="assets/city-streets.webp" alt="" width="326" height="157" loading="lazy" decoding="async" ><span class="mobile-campaign-copy"><span><strong>Retail Promotion</strong><span>Drive traffic and brand awareness in key locations.</span></span><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></span></span>
+  </a><a class="mobile-campaign-card" href="gallery.html?category=festivals" data-campaign-categories="festivals events">
+    <img src="assets/action-festival.webp" alt="" width="302" height="155" loading="lazy" decoding="async" ><span class="mobile-campaign-copy"><span><strong>Street Festival Activation</strong><span>Reach people where the crowds gather.</span></span><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></span></span>
+  </a><a class="mobile-campaign-card" href="gallery.html?category=night" data-campaign-categories="events">
+    <img src="assets/action-night.webp" alt="" width="309" height="155" loading="lazy" decoding="async" ><span class="mobile-campaign-copy"><span><strong>Evening Campaign</strong><span>Get seen on busy streets and at nighttime events.</span></span><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></span></span>
+  </a></div></section></div>
+<div class="desktop-design"><section class="cta-band" data-dark>
   <div class="wrap cta-inner">
     <h2>Bring your next<span class="accent">campaign to the street.</span></h2>
-    <div class="cta-action"><a href="quote.html" class="button ">Request a Campaign Quote <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
+    <div class="cta-action"><a href="quote.html" class="button "><span>Request a Campaign Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
   </div>
-</section>
+</section></div>
+
 </main>
 <footer class="site-footer" data-dark>
   <div class="wrap footer-inner">
     <span>Walkvertising · Toronto &amp; the GTA</span>
-    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="media-kit.html" >Media Kit</a><a href="faq.html" >FAQ</a><a href="privacy-policy.html" >Privacy Policy</a></nav>
+    <nav aria-label="More pages"><a href="where-we-advertise.html" >Where We Advertise</a><a href="agency-partnerships.html" >Agency Partnerships</a><a href="artwork-specifications.html" >Artwork Specifications</a><a href="privacy-policy.html" >Privacy Policy</a><a href="index.html#faq" >FAQ</a></nav>
     <a href="mailto:info@walkvertising.ca">info@walkvertising.ca</a>
   </div>
 </footer>
