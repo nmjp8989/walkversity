@@ -9,6 +9,20 @@
   <link rel="icon" href="assets/logo-mark.webp" type="image/webp">
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/site.js" defer></script>
+  <style>
+    /* Five-card homepage campaign showcase; all other sections retain the existing stylesheet. */
+    .campaign-showcase .campaign-action-grid{grid-template-columns:repeat(6,minmax(0,1fr));}
+    .campaign-action-grid>.tile{grid-column:span 2;display:flex;flex-direction:column;min-width:0;}
+    .campaign-action-grid>.tile:nth-child(4){grid-column:2 / span 2;}
+    .campaign-action-grid>.tile img{width:100%;height:auto;aspect-ratio:4 / 3;object-fit:cover;object-position:center;}
+    .campaign-action-grid .tile-caption{flex:1;min-height:2.7rem;}
+    @media(max-width:480px){
+      .campaign-showcase .campaign-action-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+      .campaign-action-grid>.tile:nth-child(4){grid-column:span 2;}
+      .campaign-action-grid>.tile:nth-child(5){grid-column:2 / span 2;}
+      .campaign-action-grid .tile-caption{min-height:2.7rem;}
+    }
+  </style>
 </head>
 <body class="page-home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -45,13 +59,12 @@
     <h2>Walking <br>Billboards <br><span class="mark">in Action</span></h2><div class="short-line"></div>
     <p>See how brands use Walkvertising to create awareness, drive traffic and get attention on the street.</p>
   </div>
-  <div class="grid grid-3">
-<a href="gallery.html?category=corporate" class="tile tile-yellow"><img src="assets/downtown.webp" alt="" width="245" height="148" loading="lazy" decoding="async" ><span class="tile-caption">Downtown Campaigns</span></a>
-<a href="gallery.html?category=festivals" class="tile tile-yellow"><img src="assets/events.webp" alt="" width="246" height="150" loading="lazy" decoding="async" ><span class="tile-caption">Events &amp; Festivals</span></a>
-<a href="gallery.html?category=grand-openings" class="tile tile-yellow"><img src="assets/retail.webp" alt="" width="250" height="148" loading="lazy" decoding="async" ><span class="tile-caption">Retail Launches</span></a>
-<a href="gallery.html?category=restaurants" class="tile tile-yellow"><img src="assets/product.webp" alt="" width="243" height="125" loading="lazy" decoding="async" ><span class="tile-caption">Product Promotions</span></a>
-<a href="gallery.html?category=night" class="tile tile-yellow"><img src="assets/evening.webp" alt="" width="248" height="126" loading="lazy" decoding="async" ><span class="tile-caption">Evening Campaigns</span></a>
-<a href="gallery.html?category=festivals" class="tile tile-yellow"><img src="assets/community.webp" alt="" width="248" height="126" loading="lazy" decoding="async" ><span class="tile-caption">Community &amp; Special Events</span></a>
+  <div class="grid campaign-action-grid">
+    <a href="gallery.html?category=grand-openings" class="tile tile-yellow"><img src="assets/action-grand-opening.webp" alt="Mucho Burrito grand opening walking billboards outside a FreshCo store" width="1600" height="900" loading="lazy" decoding="async"><span class="tile-caption">Grand Opening Promotions</span></a>
+    <a href="gallery.html?category=corporate" class="tile tile-yellow"><img src="assets/action-downtown-street.webp" alt="A walking billboard promoting a cold drink on a busy downtown Toronto street" width="1262" height="1246" loading="lazy" decoding="async"><span class="tile-caption">Downtown Street Campaigns</span></a>
+    <a href="gallery.html?category=festivals" class="tile tile-yellow"><img src="assets/action-sporting-events.webp" alt="Walking billboard ambassadors promoting a restaurant offer among stadium event crowds" width="1254" height="1254" loading="lazy" decoding="async"><span class="tile-caption">Sporting Events &amp; Festivals</span></a>
+    <a href="gallery.html?category=retail" class="tile tile-yellow"><img src="assets/action-retail-promotion.webp" alt="A Specsavers walking billboard reaching pedestrians on a busy shopping street" width="1448" height="1086" loading="lazy" decoding="async"><span class="tile-caption">Retail &amp; Brand Promotions</span></a>
+    <a href="gallery.html?category=night" class="tile tile-yellow"><img src="assets/action-evening-street.webp" alt="An illuminated walking billboard near Wellesley Street East at night" width="1086" height="1448" loading="lazy" decoding="async"><span class="tile-caption">Nighttime Campaigns</span></a>
 </div>
 </div></section><section class="section wrap " ><div class="brands"><h2>Brands We’ve <br><span class="mark">Worked With</span></h2><div class="brand-grid"><div class="brand"><img src="assets/brand-rbc.webp" alt="RBC" width="64" height="69" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-mcdonalds.webp" alt="McDonald’s" width="89" height="68" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-mucho.webp" alt="Mucho Burrito" width="124" height="60" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-pizza-depot.webp" alt="Pizza Depot" width="115" height="66" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-extreme-pita.webp" alt="Extreme Pita" width="149" height="44" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-toppers.webp" alt="Topper’s Pizza" width="107" height="66" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-pizza-hut.webp" alt="Pizza Hut" width="107" height="67" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-mr-sub.webp" alt="MR.SUB" width="140" height="65" loading="lazy" decoding="async" ></div><div class="brand"><img src="assets/brand-zoocasa.webp" alt="Zoocasa" width="170" height="56" loading="lazy" decoding="async" ></div></div></div></section><section class="section wrap " ><div class="section-title"><h2>Why Walking Billboards?</h2></div><div class="feature-row"><article class="feature"><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#megaphone"></use></svg></span><h3>Maximum<br>Brand Exposure</h3><p>Get noticed in high-traffic areas and at busy events.</p></article><article class="feature"><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg></span><h3>Go Where<br>Your Audience Is</h3><p>Reach people at festivals, transit hubs, shopping districts and key Toronto locations.</p></article><article class="feature"><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#bulb"></use></svg></span><h3>Illuminated<br>for Greater Impact</h3><p>High-visibility displays that stand out day and night.</p></article><article class="feature"><span class="feature-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg></span><h3>Flexible<br>&amp; Cost-Effective</h3><p>Campaign options to fit your goals, timeline and budget.</p></article></div></section><section class="partner-banner" data-dark><div class="wrap partner-inner">
   <img src="assets/partners.webp" alt="Two marketing colleagues planning a campaign" width="310" height="126" loading="lazy" decoding="async" >
