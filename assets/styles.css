@@ -612,3 +612,12 @@ fieldset input{flex:none;accent-color:#1a1a1a}
 @media(max-width:1000px){
   .page-locations .nav-more[data-active] summary{background:transparent;color:white;border-color:#343437;border-radius:0}
 }
+
+/* Shared clients and agency logo strip */
+.brands.clients-brands{grid-template-columns:minmax(0,1fr);gap:1rem;padding:clamp(.8rem,1.7vw,1.4rem)}
+.clients-brands h2{text-align:center;border:0;padding:0;line-height:1.12;font-size:clamp(1.55rem,2.9vw,2.65rem)}
+.clients-brands .brand-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(.45rem,1vw,.85rem);align-items:stretch}
+.clients-brands .brand{padding:0;min-width:0;min-height:0;overflow:hidden;border-radius:.65rem}
+.clients-brands .brand img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+@media(max-width:900px){.clients-brands .brand-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){.clients-brands .brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}.brands.clients-brands{gap:.7rem}}
