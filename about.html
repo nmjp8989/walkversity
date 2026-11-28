@@ -8,6 +8,32 @@
   <title>About | Walkvertising</title>
   <link rel="icon" href="assets/logo-mark.webp" type="image/webp">
   <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* Keep the full portrait visible without cropping or overlapping the hero copy. */
+    @media (min-width:1001px) {
+      .page-about .hero-tall .hero-image {
+        width:54%; height:calc(100% - 3.25rem); top:0; bottom:auto;
+        right:max(0px,calc((100% - 1380px)/2));
+        object-fit:contain; object-position:center;
+      }
+      .page-about .hero-tall::after {display:none}
+      .page-about .hero-tall .hero-copy {
+        position:relative;
+        padding-right:54%;
+      }
+    }
+    @media (max-width:1000px) {
+      .page-about .mobile-about-hero img {
+        width:100%; height:auto; aspect-ratio:1148/1370;
+        max-height:650px; object-fit:contain; object-position:center;
+      }
+      .page-about .mobile-about-hero::after {display:none}
+      .page-about .mobile-about-hero h1 {
+        position:relative; left:auto; bottom:auto;
+        padding:1rem .875rem;
+      }
+    }
+  </style>
   <script src="assets/site.js" defer></script>
 </head>
 <body class="page-about">
@@ -39,7 +65,7 @@
     <h1><span>We bring</span><span class="accent">brands</span><span>closer to</span><span>people.</span></h1>
     <p>High-impact, mobile advertising that puts your message directly in front of the right audience.</p><div class="hero-actions"><a href="quote.html" class="button "><span>Request a Campaign Quote</span> <svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#arrow"></use></svg></a></div>
   </div>
-  <img src="assets/hero-about.webp" alt="Walking billboards on a busy Toronto street" width="677" height="379" fetchpriority="high" class="hero-image"><svg class="wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+  <img src="assets/hero-about-full.webp" alt="A Walkvertising ambassador speaking with a pedestrian beside a McDonald's Mighty Angus billboard" width="1148" height="1370" fetchpriority="high" class="hero-image"><svg class="wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
   <path fill="#ffe20a" d="M0 28C175-25 393 29 635 33c232 5 339-27 500-23 145 4 199 29 305 8v30H0z"/>
   <path fill="#fff" d="M0 42C184-10 394 35 639 39c227 5 346-21 503-17 145 4 199 23 298 3v23H0z"/>
 </svg>
@@ -56,7 +82,7 @@
 <a href="gallery.html?category=corporate" class="tile tile-yellow"><img src="assets/downtown.webp" alt="" width="245" height="148" loading="lazy" decoding="async" ><span class="tile-caption">Downtown Campaigns</span></a>
 <a href="gallery.html?category=night" class="tile tile-yellow"><img src="assets/evening.webp" alt="" width="248" height="126" loading="lazy" decoding="async" ><span class="tile-caption">Evening Campaigns</span></a>
 </div></section><section class="section wrap " ><div class="audience-strip"><h2 class="display">Who We<br><span class="mark">Work With</span></h2><div class="audience-grid"><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#food"></use></svg>Restaurants<br>&amp; Food Brands</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#retail"></use></svg>Retail<br>Businesses</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#megaphone"></use></svg>Advertising<br>Agencies</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#calendar"></use></svg>Event &amp; Festival<br>Organizers</div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#building"></use></svg>Corporate<br>Marketing Teams</div></div></div></section></div><div class="mobile-design"><section class="section wrap mobile-section" ><div class="mobile-about-hero">
-  <img src="assets/about-mobile.webp" alt="A Walkvertising ambassador wearing a billboard" width="960" height="640" fetchpriority="high" >
+  <img src="assets/hero-about-full.webp" alt="A Walkvertising ambassador speaking with a pedestrian beside a McDonald's Mighty Angus billboard" width="1148" height="1370" fetchpriority="high" >
   <h1>About<br>Walkvertising</h1>
 </div>
 <div class="mobile-about-card">
